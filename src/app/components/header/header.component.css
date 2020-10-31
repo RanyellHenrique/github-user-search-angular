@@ -1,0 +1,36 @@
+.header-container {
+    background: linear-gradient(135deg,#0143a3,#0273d4);
+    color: #FFF;
+    align-items: center;
+    padding: 15px 0px;
+    font-family: Roboto;
+}
+
+.header-title {
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.header-nav-bar-content {
+    display: flex;
+}
+
+.active {
+    color: #FFF;
+    font-weight: bolder;
+}
+
+ul {
+    list-style-type: none;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+a {
+    color: rgba(255, 255, 255,0.6);
+}
+
+a:hover {
+    text-decoration: none;
+    color: unset;
+}

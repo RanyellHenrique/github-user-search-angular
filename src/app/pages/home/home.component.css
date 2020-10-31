@@ -1,0 +1,40 @@
+.home-title {
+    font-family: 'Red Hat Display';
+    font-size: 48px;
+    line-height: 64px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.02em;
+    color: #062847;
+}
+
+.home-subtitle{
+    font-size: 20px;
+    line-height: 36px;
+    color: #5A6774;
+}
+
+.home-image {
+    height: 100%;
+    width: 100%;
+}
+
+.home-container {
+    height: calc(100vh - 75px);
+}
+
+.home-content {
+    height: 100%;
+}
+
+.home-button {
+    color: #FFF;
+    background: linear-gradient(135deg,#0143a3,#0273d4);
+    width: 20rem;
+    height: 3rem;
+   
+}
+
+.home-button:hover {
+    background: linear-gradient(135deg,#4f88df,#2c9cff);
+}

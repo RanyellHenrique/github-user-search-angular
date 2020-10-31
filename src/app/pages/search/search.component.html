@@ -1,0 +1,62 @@
+<div class="container search-container">
+    <div class="row search-content align-items-center">
+        <div class="col-12  search-form-content p-3 mt-2">
+            <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+                <h3 class="mt-4">Encontre um perfil Github</h3>
+                <input type="text" class="form-control col-7 mt-3" placeholder="Usuário Github"
+                    formControlName="username">
+                <button class="btn btn-primary mt-3">
+                    Encontrar
+                </button>
+            </form>
+        </div>
+        <div class="col-12 search-info-container container  p-3 mt-2" *ngIf="gitUser$ |async as user;">
+            <div class="row">
+                <div class="col-3">
+                    <img src={{user.avatar_url}} alt="" class="search-info-image">
+                </div>
+                <div class="col-9">
+                    <div class="search-info-content">
+                        <div class="serch-info-content-tag row">
+                            <div class="serch-info-tag mr-2 pl-2 pr-2">
+                                Repositórios públicos: {{user.public_repos}}
+                            </div>
+                            <div class="serch-info-tag mr-2 pl-2 pr-2">
+                                Seguidores: {{user.followers}}
+                            </div>
+                            <div class="serch-info-tag pl-2 pr-2">
+                                Seguindo: {{user.following}}
+                            </div>
+                        </div>
+                        <div class="search-info row">
+                            <div class="col">
+                                <h3>Informações</h3>
+                                <ul class="search-info-list ">
+                                    <li>
+                                        Empresa: {{user.company}}
+                                    </li>
+                                    <li>
+                                        Website/Blog: {{user.blog}}
+                                    </li>
+                                    <li>
+                                        Localidade: {{user.location}}
+                                    </li>
+                                    <li>
+                                        Membro desde: {{user.created_at | date: 'dd/MM/yyyy'}}
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row p-3">
+                <a href={{user.html_url}}>
+                    <button class="btn btn-primary lg">
+                        Ver perfil
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
